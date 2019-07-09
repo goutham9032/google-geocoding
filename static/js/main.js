@@ -15,6 +15,7 @@ $DOM.ready(function(){
 
     function file_upload(){
        $('#upload_exel').prop('disabled',false);
+       $('#download_btn').remove();
     }
 
     function reset_file_ip(){
@@ -37,6 +38,7 @@ $DOM.ready(function(){
                                 <a href="`+ down_url +`"> Download Results</a>
                             </button>`
                 $('.button_div').append(html)
+                $('#upload_exel').prop('disabled', true);
 			}
             else if(this.responseText.includes('false')){
                 if(!$(".alertify-notifier .ajs-error").is(':visible')){
