@@ -1,0 +1,20 @@
+#file_upload_form{
+   width:50%;
+   margin-top:5%;
+}
+.note_div{
+   font-size: 0.8rem;
+   color: #696464;
+}
+#download_btn{
+    margin-left:60%;
+}
+.button_div{  
+     margin-top:2rem;
+}
+.no_display{
+   display:none;
+}
+#download_btn a{
+   color:white;
+}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+   <div class="row justify-content-center">
+   
+	   <form method="POST" enctype="multipart/form-data" class="form-horizontal" id="file_upload_form">
+			{% csrf_token %}
+            <h2 align="center" class="page_title">Coordinates Finder</h2>
+			<div class="form-group file_upload_div">
+					<input type="file" name="exel_file" id="ip_exel_file" required="True" class="form-control" accept=".xlsx, .xls">
+				    <div class="note_div">
+					   <strong>Note:</strong>
+					      Files with .xls/xlsx extension only be uploaded here.
+				    </div>
+			        <div class="button_div">
+						<button class="btn btn-info" id="upload_exel" disabled>
+								 <i class="fa fa-spinner fa-spin no_display"></i>
+								 <span class="glyphicon glyphicon-upload" style="margin-right:5px;">Upload File</span>
+						</button>
+			        </div>
+			</div>
+		</form>
+      
+   </div>
+{% endblock %}
