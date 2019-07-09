@@ -50,7 +50,11 @@ python3 manage.py makemigrations
 ```bash
 python3 manage.py migrate
 ```
-
+## Configure Geocoding API key
+```bash
+REF : https://developers.google.com/maps/documentation/geocoding/get-api-key
+```
+> Note : Please copy paste the api key in settings.py for GEOCODING_API_KEY
 
 ## Running Locally
 ```bash
