@@ -19,9 +19,9 @@ $DOM.ready(function(){
     }
 
     function reset_file_ip(){
-		$('#ip_exel_file').val('');
-		$('#upload_exel .fa-spinner').addClass('no_display');
-		$('#upload_exel .glyphicon-upload').html('Upload File');
+        $('#ip_exel_file').val('');
+        $('#upload_exel .fa-spinner').addClass('no_display');
+        $('#upload_exel .glyphicon-upload').html('Upload File');
     }
 
     function upload_exel(){
@@ -30,7 +30,7 @@ $DOM.ready(function(){
         event.preventDefault();
         var request = new XMLHttpRequest();
         request.onreadystatechange = function() {
-			if(this.readyState === 4  && this.status == 200 && this.responseText.includes('true')){
+            if(this.readyState === 4  && this.status == 200 && this.responseText.includes('true')){
                 reset_file_ip()
                 alertify.success('File uploaded successfully');
                 var down_url = JSON.parse(this.responseText)['download_url']
@@ -39,7 +39,7 @@ $DOM.ready(function(){
                             </button>`
                 $('.button_div').append(html)
                 $('#upload_exel').prop('disabled', true);
-			}
+            }
             else if(this.responseText.includes('false')){
                 if(!$(".alertify-notifier .ajs-error").is(':visible')){
                    reset_file_ip()
